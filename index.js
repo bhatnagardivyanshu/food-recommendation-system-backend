@@ -27,7 +27,7 @@ network.train(this.trainingData);
 
 console.log('training finished at', functions.getTime())
 
-const testData = {"salty":0.12, "sweet":0.47, "spicy":0.97};
+const testData = {"salty":0.62, "sweet":0.17, "spicy":0.97};
 
 // const testData = {
 //     "spicy": 0.6,
