@@ -10,24 +10,38 @@ const trainingData = [];
 // this.trainingData = functions.prepareTrainingData();
 
 
+// assuming that the person likes junk, salty and sometimes spicy food.
+// he is not into sweet food items for sure
+
 this.trainingData = [
-    {input: {"salty":0.30, "sweet":0.80, "spicy":0.12 }, output: {"like": 0.80}},
-    {input: {"salty":0.17, "sweet":0.74, "spicy":0.15 }, output: {"like": 0.75}},
-    {input: {"salty":0.13, "sweet":0.94, "spicy":0.09 }, output: {"like": 0.97}},
-    {input: {"salty":0.31, "sweet":0.69, "spicy":0.21 }, output: {"like": 0.69}},
-    {input: {"salty":0.62, "sweet":0.46, "spicy":0.38 }, output: {"like": 0.34}},
-    {input: {"salty":0.73, "sweet":0.38, "spicy":0.49 }, output: {"like": 0.25}},
+    {input: {"salty":0.83, "sweet":0.24, "spicy":0.41, "junk":0.90 }, output: {"like": 1}}, // pizza
+    {input: {"salty":0.74, "sweet":0.17, "spicy":0.37, "junk":0.88 }, output: {"like": 1}}, // burger
+    {input: {"salty":0.94, "sweet":0.13, "spicy":0.65, "junk":0.92 }, output: {"like": 1}}, // chhole bhature
+    {input: {"salty":0.79, "sweet":0.31, "spicy":0.33, "junk":0.75 }, output: {"like": 1}}, // pasta
+    {input: {"salty":0.46, "sweet":0.12, "spicy":0.23, "junk":0.07 }, output: {"like": 0}}, // sprouts
+    {input: {"salty":0.28, "sweet":0.73, "spicy":0.12, "junk":0.08 }, output: {"like": 0}}, // fruit-salad
+    {input: {"salty":0.68, "sweet":0.13, "spicy":0.12, "junk":0.13 }, output: {"like": 0}}, // salty,less spicy,less junk
+    {input: {"salty":0.72, "sweet":0.13, "spicy":0.12, "junk":0.64 }, output: {"like": 1}}, // salty,less spicy,high junk
+    {input: {"salty":0.02, "sweet":0.79, "spicy":0.03, "junk":0.63 }, output: {"like": 0}}, // jalebi
+
 ]
 
 // console.log(this.trainingData[0]);
 
-console.log('training started at', functions.getTime())
+console.log('training started at', functions.getTime());
 
-network.train(this.trainingData);
+network.train(this.trainingData, {
+    errorThresh: 0.01,
+    iterations: 10000,
+    // log: true,
+    logPeriod: 10,
+    learningRate: 0.1
+});
 
 console.log('training finished at', functions.getTime())
 
-const testData = {"salty":0.62, "sweet":0.17, "spicy":0.97};
+// const testData = {"salty":0.72, "sweet":0.17, "spicy":0.73, "junk":0.63 }; // chowmein
+const testData = {"salty":0.02, "sweet":0.79, "spicy":0.03, "junk":0.63 }; // jalebi
 
 // const testData = {
 //     "spicy": 0.6,
