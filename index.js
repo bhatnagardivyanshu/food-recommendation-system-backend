@@ -3,7 +3,9 @@ const fs = require('fs');
 
 const functions = require('./functions');
 
-const network = new brain.NeuralNetwork();
+const network = new brain.NeuralNetwork({
+    hiddenLayers: [6,3]
+});
 
 const trainingData = [];
 

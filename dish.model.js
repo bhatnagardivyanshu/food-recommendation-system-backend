@@ -1,66 +1,64 @@
 class Dish {
 
-    constructor(name, cuisine, img, sweet, salty, spicy, healthy, junk) {
-        this.name = name;
-        this.cuisine = cuisine;
-        this.img = img;
-        this.sweet = sweet;
-        this.salty = salty;
-        this.spicy = spicy;
-        this.healthy = healthy;
-        this.junk = junk;
+    constructor(name, code, cuisine, img, sweet, salty, spicy, junk) {
+        this._name = name;
+        this._code = code;
+        this._cuisine = cuisine;
+        this._img = img;
+        this._sweet = sweet;
+        this._salty = salty;
+        this._spicy = spicy;
+        this._junk = junk;
     }
 
     get name() {
-        return this.name;
+        return this._name;
+    }
+    get code() {
+        return this._code;
     }
     get cuisine() {
-        return this.cuisine;
+        return this._cuisine;
     }
     get img() {
-        return this.img;
+        return this._img;
     }
     get sweet() {
-        return this.sweet;
+        return this._sweet;
     }
     get salty() {
-        return this.salty;
+        return this._salty;
     }
     get spicy() {
-        return this.spicy;
-    }
-    get healthy() {
-        return this.healthy;
+        return this._spicy;
     }
     get junk() {
-        return this.junk;
+        return this._junk;
     }
-
     set name(name) {
-        this.name = name;
+        this._name = name;
+    }
+    set code(code) {
+        this._code = code;
     }
     set cuisine(cuisine) {
-        this.cuisine = cuisine;
+        this._cuisine = cuisine;
     }
     set img(img) {
-        this.img = img;
+        this._img = img;
     }
     set sweet(sweet) {
-        this.sweet = sweet;
+        this._sweet = sweet;
     }
     set salty(salty) {
-        this.salty = salty;
+        this._salty = salty;
     }
     set spicy(spicy) {
-        this.spicy = spicy;
-    }
-    set healthy(healthy) {
-        this.healthy = healthy;
+        this._spicy = spicy;
     }
     set junk(junk) {
-        this.junk = junk;
+        this._junk = junk;
     }
-    
     
 }
 
