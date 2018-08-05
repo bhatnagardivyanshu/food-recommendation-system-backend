@@ -7,16 +7,16 @@ const dishes = module.exports = [];
 // --------------------------------- ITALIAN ---------------------------------
 
 
-const pizza = new Dish('Pizza', 'pizza', config.cuisines.italian.text, '', 0.77, 0.33, 0.29, 0.90);
+const pizza = new Dish('Pizza', 'pizza', config.cuisines.italian.text, 'https://s.hswstatic.com/gif/recipes/easy-personal-pizza-recipe-1.jpg', 0.77, 0.33, 0.29, 0.90);
 dishes.push(pizza);
 
-const pasta = new Dish('Pasta', 'pasta', config.cuisines.italian.text, '', 0.62, 0.43, 0.29, 0.90);
+const pasta = new Dish('Pasta', 'pasta', config.cuisines.italian.text, 'http://del.h-cdn.co/assets/cm/15/10/54f6778de66db_-_919410edec43d0b24531a868832da-1.jpg', 0.62, 0.43, 0.29, 0.90);
 dishes.push(pasta);
 
-const garlic_bread = new Dish('Garlic Bread', 'garlicbread', config.cuisines.italian.text, '', 0.62, 0.43, 0.29, 0.90);
+const garlic_bread = new Dish('Garlic Bread', 'garlicbread', config.cuisines.italian.text, 'https://i2.wp.com/kidseatbyshanai.com/wp-content/uploads/2018/03/cheesy_pullapart_garlic_bread_square2.jpg?fit=200%2C200', 0.62, 0.43, 0.29, 0.90);
 dishes.push(garlic_bread);
 
-const italian_salad = new Dish('Italian Salad', 'italiansalad', config.cuisines.italian.text, '', 0.62, 0.43, 0.29, 0.90);
+const italian_salad = new Dish('Italian Salad', 'italiansalad', config.cuisines.italian.text, 'http://purpledonkeycooking.com/wp-content/uploads/2016/06/x201010-xl-big-italian-salad-200x200.jpg.pagespeed.ic.R7eTUnu6uU.jpg', 0.62, 0.43, 0.29, 0.90);
 dishes.push(italian_salad);
 
 
