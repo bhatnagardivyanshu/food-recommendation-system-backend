@@ -52,6 +52,15 @@ app.get('/recommendations', (req, res) => {
     res.json(recommendations);
 });
 
+// get details for a dish
+app.get('/dishes/:name', (req, res) => {
+    const name = req.params.name.trim();
+    const dish = network.getDishByName(name);
+    if (dish) res.json(dish);
+    else res.send(null);
+        
+});
+
 // get prediction for a dish
 app.get('/dishes/:name/predict', (req, res) => {
 

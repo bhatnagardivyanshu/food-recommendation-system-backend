@@ -19,7 +19,7 @@ const prepareInput = (dish) => {
     return [dish._salty,dish._sweet,dish._spicy,dish._junk];
 }
 
-const getDishByName = (name) => {
+exports.getDishByName = (name) => {
     const index = _.findIndex(dishes, (dish) => dish.code == name);
     return dishes[index] || null;
 }
@@ -54,7 +54,7 @@ exports.getRecommendations = () => {
 }
 
 exports.predictForDish = (name) => {
-    const dish = getDishByName(name);
+    const dish = exports.getDishByName(name);
     if (dish) {
         const input = prepareInput(dish);
         return predictScore(input);
