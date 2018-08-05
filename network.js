@@ -49,7 +49,7 @@ exports.getRecommendations = () => {
 
         return score > config.minScoreForRecommendation;
             
-    });
+    }).sort((a, b) => (b.score - a.score));
     
 }
 
