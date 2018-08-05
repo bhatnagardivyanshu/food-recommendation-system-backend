@@ -1,6 +1,6 @@
 class Dish {
 
-    constructor(name, code, cuisine, img, sweet, salty, spicy, junk) {
+    constructor(name, code, cuisine, img, salty, sweet, spicy, junk) {
         this._name = name;
         this._code = code;
         this._cuisine = cuisine;

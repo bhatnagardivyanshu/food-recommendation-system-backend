@@ -1,4 +1,4 @@
-module.exports = {
+exports.cuisines = {
     italian: {
         text: 'Italian'
     },
@@ -15,3 +15,5 @@ module.exports = {
         text: 'American'
     }
 }
+
+exports.minScoreForRecommendation = 75;

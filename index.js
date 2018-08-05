@@ -10,7 +10,7 @@ const fs = require('fs');
 const bodyParser = require('body-parser')
 
 const functions = require('./functions');
-const network = require('./Network.model');
+const network = require('./network');
 
 //  1. train network
 network.trainNetwork();
@@ -34,11 +34,29 @@ app.get('/', (req, res) => {
 // get all the dishes
 app.get('/dishes', (req, res) => {
 
-    // get all the dishes
     const dishes = require('./dishes');
     res.status(200).json(dishes);
-    
-    
+
+});
+
+// get recommendations
+app.get('/recommendations', (req, res) => {
+    const recommendations = network.getRecommendations();
+    res.json(recommendations);
+});
+
+// get prediction for a dish
+app.get('/dishes/:name/predict', (req, res) => {
+
+    const name = req.params.name.trim();
+    const score = network.predictForDish(name);
+    if (score) {
+        res.json(score);
+    }
+    else {
+        res.status(401).send('Uh-oh! Seems like that dish is not on our list');
+    }
+
 });
 
 
