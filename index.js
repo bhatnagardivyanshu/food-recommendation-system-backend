@@ -51,7 +51,9 @@ app.get('/dishes/:name/predict', (req, res) => {
     const name = req.params.name.trim();
     const score = network.predictForDish(name);
     if (score) {
-        res.json(score);
+        res.json({
+            score: score
+        });
     }
     else {
         res.status(401).send('Uh-oh! Seems like that dish is not on our list');

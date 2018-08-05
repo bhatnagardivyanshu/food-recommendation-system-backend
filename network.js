@@ -11,11 +11,11 @@ const trainingData = _.shuffle(require('./training_data').data);
 
 const predictScore = (dish) => {
     const score = parseFloat(network.run(dish).like);
-    return score * 100;
+    return parseInt(score * 100);
 }
 
 const prepareInput = (dish) => {
-    console.log('preparing input for', dish);
+    // console.log('preparing input for', dish);
     return [dish._salty,dish._sweet,dish._spicy,dish._junk];
 }
 
@@ -26,8 +26,8 @@ const getDishByName = (name) => {
 
 
 exports.trainNetwork = () => {
-    console.log(trainingData);
-    console.log('training started at', new Date().toTimeString());
+    // console.log(trainingData);
+    // console.log('training started at', new Date().toTimeString());
     network.train(trainingData, {
         errorThresh: 0.01,
         iterations: 100000,
@@ -35,7 +35,7 @@ exports.trainNetwork = () => {
         logPeriod: 10,
         learningRate: 0.1
     });
-    console.log('training completed at', new Date().toTimeString());
+    // console.log('training completed at', new Date().toTimeString());
     
 }
 
