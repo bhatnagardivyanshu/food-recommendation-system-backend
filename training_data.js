@@ -1,6 +1,22 @@
 // order salty, sweet, spicy, junk
 exports.data = [
+
+    // salty
+    
+    // {input: [0.83, 0.24, 0.41, 0.90 ], output: {like: 1}},
+    // {input: [0.28, 0.73, 0.12, 0.08 ], output: {like: 0}},
+    // {input: [0.74, 0.17, 0.37, 0.88 ], output: {like: 1}},
+    // {input: [0.79, 0.31, 0.33, 0.75 ], output: {like: 1}},
+    // {input: [0.46, 0.12, 0.23, 0.07 ], output: {like: 0}},
+    // {input: [0.94, 0.13, 0.65, 0.92 ], output: {like: 1}},
+    // {input: [0.68, 0.13, 0.12, 0.13 ], output: {like: 0}},
+    // {input: [0.72, 0.13, 0.12, 0.64 ], output: {like: 1}},
+    // {input: [0.02, 0.79, 0.03, 0.63 ], output: {like: 0}},
+
+    // balanced
+    // salty, sweet, spicy, junk
     {input: [0.83, 0.24, 0.41, 0.90 ], output: {like: 1}},
+    {input: [0.76, 0.31, 0.39, 0.70 ], output: {like: 1}},
     {input: [0.28, 0.73, 0.12, 0.08 ], output: {like: 0}},
     {input: [0.74, 0.17, 0.37, 0.88 ], output: {like: 1}},
     {input: [0.79, 0.31, 0.33, 0.75 ], output: {like: 1}},
@@ -9,6 +25,20 @@ exports.data = [
     {input: [0.68, 0.13, 0.12, 0.13 ], output: {like: 0}},
     {input: [0.72, 0.13, 0.12, 0.64 ], output: {like: 1}},
     {input: [0.02, 0.79, 0.03, 0.63 ], output: {like: 0}},
+    
+    // sweet
+
+    // {input: [0.83, 0.24, 0.41, 0.90 ], output: {like: 0}},
+    // {input: [0.28, 0.73, 0.12, 0.08 ], output: {like: 1}},
+    // {input: [0.74, 0.17, 0.37, 0.88 ], output: {like: 0}},
+    // {input: [0.79, 0.31, 0.33, 0.75 ], output: {like: 0}},
+    // {input: [0.46, 0.12, 0.23, 0.07 ], output: {like: 1}},
+    // {input: [0.94, 0.13, 0.65, 0.92 ], output: {like: 0}},
+    // {input: [0.68, 0.13, 0.12, 0.13 ], output: {like: 1}},
+    // {input: [0.72, 0.13, 0.12, 0.64 ], output: {like: 0}},
+    // {input: [0.02, 0.79, 0.03, 0.63 ], output: {like: 1}},
+
+    
 ];
 
 
