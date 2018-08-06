@@ -63,7 +63,7 @@ exports.predictForDish = (name) => {
     // console.log('Dish', dish);
     if (dish) {
         const input = prepareInput(dish);
-        console.log('Input', input)
+        // console.log('Input', input)
         const score = predictScore(input);
         return score;
     }

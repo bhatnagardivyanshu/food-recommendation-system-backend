@@ -49,7 +49,7 @@ app.get('/dishes', (req, res) => {
 // get recommendations
 app.get('/recommendations', (req, res) => {
     const cuisine = req.query.cuisine;
-    console.log('Recommendations with cuisine', cuisine);
+    // console.log('Recommendations with cuisine', cuisine);
     const recommendations = network.getRecommendations(cuisine);
     res.json(recommendations);
 });
@@ -67,7 +67,7 @@ app.get('/dishes/:name/details', (req, res) => {
 app.get('/dishes/:name/predict', (req, res) => {
 
     const name = req.params.name.trim();
-    console.log('Predicting', name);
+    // console.log('Predicting', name);
     const score = network.predictForDish(name);
     if (score) {
         res.json({

@@ -72,7 +72,7 @@ dishes.push(bread_pakoda);
 const samosa = new Dish('Samosa', 'samosa', config.cuisines.north_indian.text, 'https://lh3.googleusercontent.com/-44nKRo00iis/Tn9pdPez23I/AAAAAAAAAGA/1tB4CL2vd3A/s400/samosa.jpg', 0.77, 0.08, 0.71, 0.90);
 dishes.push(samosa);
 
-const butter_chicken = new Dish('Butter Chicken', 'butterchicken', config.cuisines.north_indian.text, 'http://allrecipeshub.com/wp-content/uploads/2016/03/Butter-chicken-200x200.jpg', 0.77, 0.38, 0.54, 0.88);
+const butter_chicken = new Dish('Butter Chicken', 'butterchicken', config.cuisines.north_indian.text, 'http://allrecipeshub.com/wp-content/uploads/2016/03/Butter-chicken-200x200.jpg', 0.72, 0.78, 0.54, 0.88);
 dishes.push(butter_chicken);
 
 const kachodi = new Dish('Kachodi', 'kachodi', config.cuisines.north_indian.text, 'https://b.zmtcdn.com/data/reviews_photos/f38/c0ef0c24bf167f5c4179fb2bec82cf38_1520440974.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A', 0.82, 0.12, 0.77, 0.68);
@@ -84,7 +84,7 @@ dishes.push(pao_bhaji);
 const dal_makhani = new Dish('Dal Makhani', 'dalmakhani', config.cuisines.north_indian.text, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgfolVbD4UMRGFx6veIyJyHS7EnMeSHDTi4amAM0xXpkqOP-j0HA', 0.82, 0.23, 0.77, 0.83);
 dishes.push(dal_makhani);
 
-const shahi_paneer = new Dish('Shahi Paneer', 'shahipaneer', config.cuisines.north_indian.text, 'https://i.pinimg.com/236x/20/b0/11/20b011bc15af6582ceb79b856f5c2962--side-dish-recipes-dishes-recipes.jpg', 0.71, 0.61, 0.55, 0.78);
+const shahi_paneer = new Dish('Shahi Paneer', 'shahipaneer', config.cuisines.north_indian.text, 'https://i.pinimg.com/236x/20/b0/11/20b011bc15af6582ceb79b856f5c2962--side-dish-recipes-dishes-recipes.jpg', 0.71, 0.82, 0.55, 0.78);
 dishes.push(shahi_paneer);
 
 const rasmalai = new Dish('Rasmalai', 'rasmalai', config.cuisines.north_indian.text, 'https://doonatdoor.com/image/cache/BKSbazaar/1stopnshop/traditional_rasmalai_recipe-200x200.jpg', 0.09, 0.81, 0.05, 0.77);
@@ -98,6 +98,9 @@ dishes.push(jalebi);
 
 const maggi = new Dish('Maggi', 'maggi', config.cuisines.north_indian.text, 'http://sahakarisupermarketudaipur.com/wp-content/uploads/2017/08/MAGGI-NOODLES-MASALA-150GM_resize.jpeg', 0.77, 0.24, 0.59, 0.66);
 dishes.push(maggi);
+
+const chhole_bhature = new Dish('Chhole Bhature', 'chholebhature', config.cuisines.north_indian.text, 'https://b.zmtcdn.com/data/reviews_photos/015/a2814ad258a093198e13f656b068a015_1474872751.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A', 0.91, 0.22, 0.59, 0.96);
+dishes.push(chhole_bhature);
 
 
 // --------------------------------- SOUTH INDIAN ---------------------------------

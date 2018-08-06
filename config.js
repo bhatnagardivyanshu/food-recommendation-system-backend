@@ -16,4 +16,4 @@ exports.cuisines = {
     }
 }
 
-exports.minScoreForRecommendation = 90;
+exports.minScoreForRecommendation = 70;
