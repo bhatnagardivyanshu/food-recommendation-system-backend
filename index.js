@@ -48,7 +48,9 @@ app.get('/dishes', (req, res) => {
 
 // get recommendations
 app.get('/recommendations', (req, res) => {
-    const recommendations = network.getRecommendations();
+    const cuisine = req.query.cuisine;
+    console.log('Recommendations with cuisine', cuisine);
+    const recommendations = network.getRecommendations(cuisine);
     res.json(recommendations);
 });
 

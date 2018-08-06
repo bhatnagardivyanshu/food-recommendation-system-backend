@@ -11,7 +11,7 @@ const trainingData = _.shuffle(require('./training_data').data);
 
 const predictScore = (dish) => {
     const score = parseFloat(network.run(dish).like);
-    console.log(network.run(dish))
+    // console.log(network.run(dish))
     return parseInt(score * 100) || 0;
 }
 
@@ -40,7 +40,7 @@ exports.trainNetwork = () => {
     
 }
 
-exports.getRecommendations = () => {
+exports.getRecommendations = (cuisine = false) => {
 
     return dishes.filter( (dish) => {
 
@@ -48,6 +48,10 @@ exports.getRecommendations = () => {
         const score = predictScore(input);
         dish['score'] = score;
 
+        if (cuisine && transformedCuisine(dish._cuisine) != cuisine) {
+            return false;
+        }
+        
         return score > config.minScoreForRecommendation;
             
     }).sort((a, b) => (b.score - a.score));
@@ -56,7 +60,7 @@ exports.getRecommendations = () => {
 
 exports.predictForDish = (name) => {
     const dish = exports.getDishByName(name);
-    console.log('Dish', dish);
+    // console.log('Dish', dish);
     if (dish) {
         const input = prepareInput(dish);
         console.log('Input', input)
@@ -64,4 +68,8 @@ exports.predictForDish = (name) => {
         return score;
     }
     return null;
+}
+
+transformedCuisine = (cuisineName) => {
+    return cuisineName.split(' ').join('').toLowerCase();
 }
