@@ -53,7 +53,7 @@ app.get('/recommendations', (req, res) => {
 });
 
 // get details for a dish
-app.get('/dishes/:name', (req, res) => {
+app.get('/dishes/:name/details', (req, res) => {
     const name = req.params.name.trim();
     const dish = network.getDishByName(name);
     if (dish) res.json(dish);
@@ -65,6 +65,7 @@ app.get('/dishes/:name', (req, res) => {
 app.get('/dishes/:name/predict', (req, res) => {
 
     const name = req.params.name.trim();
+    console.log('Predicting', name);
     const score = network.predictForDish(name);
     if (score) {
         res.json({

@@ -11,7 +11,8 @@ const trainingData = _.shuffle(require('./training_data').data);
 
 const predictScore = (dish) => {
     const score = parseFloat(network.run(dish).like);
-    return parseInt(score * 100);
+    console.log(network.run(dish))
+    return parseInt(score * 100) || 0;
 }
 
 const prepareInput = (dish) => {
@@ -55,9 +56,12 @@ exports.getRecommendations = () => {
 
 exports.predictForDish = (name) => {
     const dish = exports.getDishByName(name);
+    console.log('Dish', dish);
     if (dish) {
         const input = prepareInput(dish);
-        return predictScore(input);
+        console.log('Input', input)
+        const score = predictScore(input);
+        return score;
     }
     return null;
 }
