@@ -29,6 +29,7 @@ app.use(function (req, res, next) {
 // body-parser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(bodyParser.text({type: 'text/plain'}));
 
 
 app.get('/', (req, res) => {
@@ -47,12 +48,15 @@ app.get('/dishes', (req, res) => {
 });
 
 app.post('/train', (req, res) => {
-    const data = req.body;
+    const data = JSON.parse(req.body);
     console.log("training with data", data);
     // res.json(data);
     const trainingData = functions.trainWithData(data);
     network.trainNetwork(trainingData);
-    res.json({code: 200})
+
+    res.redirect('/recommendations');
+    
+    // res.json({code: 200})
     // res.json(trainingData);
     
     // res.json(likes);
