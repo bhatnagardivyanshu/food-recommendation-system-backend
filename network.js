@@ -26,10 +26,11 @@ exports.getDishByName = (name) => {
 }
 
 
-exports.trainNetwork = () => {
+exports.trainNetwork = (data) => {
     // console.log(trainingData);
     // console.log('training started at', new Date().toTimeString());
-    network.train(trainingData, {
+    let trainingSet = (data) ? data : trainingData;
+    network.train(trainingSet, {
         errorThresh: 0.01,
         iterations: 100000,
         // log: true,
@@ -37,6 +38,7 @@ exports.trainNetwork = () => {
         learningRate: 0.1
     });
     // console.log('training completed at', new Date().toTimeString());
+    console.log('Training Completed');
     
 }
 

@@ -64,6 +64,39 @@ module.exports = {
 
     getTime() {
         return new Date().toTimeString();
+    },
+
+    trainWithData(data) {
+        
+        const dishes = require('./dishes');
+        const trainingSet = [];
+        
+        dishes.forEach((dish) => {
+
+            const input = []; let output = [];
+
+            if (data.likes.indexOf(dish._code) > -1) {
+                input.push(dish._salty, dish._sweet, dish._spicy, dish._junk);
+                output = { like: 1 };
+                trainingSet.push({
+                    input,
+                    output
+                });
+
+            } else if (data.dislikes.indexOf(dish._code) > -1) {
+                input.push(dish._salty, dish._sweet, dish._spicy, dish._junk);
+                output = { like: 0 };
+                trainingSet.push({
+                    input,
+                    output
+                })
+            }
+        });
+        return trainingSet;
+        
+        // console.log('likes', likes);
+        // console.log('dislikes', dislikes);
+        
     }
 
 }

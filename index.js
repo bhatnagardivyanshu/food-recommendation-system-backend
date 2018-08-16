@@ -13,8 +13,8 @@ const functions = require('./functions');
 const network = require('./network');
 
 //  1. train network
-network.trainNetwork();
-console.log('Network is ready');
+// network.trainNetwork();
+// console.log('Network is ready');
 
 
 const app = express();
@@ -44,6 +44,18 @@ app.get('/dishes', (req, res) => {
     const dishes = require('./dishes');
     res.status(200).json(dishes);
 
+});
+
+app.post('/train', (req, res) => {
+    const data = req.body;
+    console.log("training with data", data);
+    // res.json(data);
+    const trainingData = functions.trainWithData(data);
+    network.trainNetwork(trainingData);
+    res.json({code: 200})
+    // res.json(trainingData);
+    
+    // res.json(likes);
 });
 
 // get recommendations
